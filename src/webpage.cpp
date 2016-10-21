@@ -1104,9 +1104,9 @@ QImage WebPage::renderImage()
 
             // Render the web page onto the small tile first
             painter.begin(&tileBuffer);
-            painter.setRenderHint(QPainter::Antialiasing, true);
-            painter.setRenderHint(QPainter::TextAntialiasing, true);
-            painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
+            painter.setRenderHint(QPainter::Antialiasing, false);
+            painter.setRenderHint(QPainter::TextAntialiasing, false);
+            painter.setRenderHint(QPainter::SmoothPixmapTransform, false);
             painter.translate(-frameRect.left(), -frameRect.top());
             painter.translate(-x * tileSize, -y * tileSize);
             m_mainFrame->render(&painter, QRegion(frameRect));
